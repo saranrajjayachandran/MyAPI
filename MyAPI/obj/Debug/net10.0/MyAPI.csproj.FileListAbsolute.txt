@@ -34,3 +34,4 @@
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/MyAPI.pdb
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/MyAPI.genruntimeconfig.cache
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/ref/MyAPI.dll
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/MyAPI.sourcelink.json
