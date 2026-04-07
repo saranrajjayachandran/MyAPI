@@ -35,3 +35,8 @@
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/MyAPI.genruntimeconfig.cache
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/ref/MyAPI.dll
 /home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/Debug/net10.0/MyAPI.sourcelink.json
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.dll
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/bin/Debug/net10.0/Npgsql.dll
+/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/bin/Debug/net10.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
