@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyAPI.Data;
 using MyAPI.Models;
+using MyAPI.Services;
 
 namespace MyAPI.Controllers
 {
@@ -10,17 +11,16 @@ namespace MyAPI.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        public ProductController(AppDbContext context)
+        private readonly IproductService _productService;
+        public ProductController(IproductService service)
         {
-            _context = context;
+            _productService = service;
         }
 
         [HttpPost]
         public async Task<IActionResult> InsertProducts(ProductModel product)
         {
-            _context.Products.Add(product);
-            await _context.SaveChangesAsync();
+            await _productService.InsertProducts(product);
             var successMsg = new SuccessResponseModel<string>{
                 resultCode = "01",
                 errorMsg = "Product Created Successfully"
@@ -31,8 +31,7 @@ namespace MyAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> InsertCategory(CategoryModel category)
         {
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
+            await _productService.InsertCategory(category);
             var successMsg = new SuccessResponseModel<string>
             {
                 resultCode = "01",
@@ -44,12 +43,12 @@ namespace MyAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProducts()
         {
-            var lst_products = await _context.Products.Include(p => p.Category).ToListAsync();
+            var lst_products = await _productService.GetProducts();
             var response = new SuccessResponseModel<ProductModel>
             {
                 resultCode = "01",
                 errorMsg = "",
-                Data = lst_products 
+                Data = lst_products.ToList() 
             };
             return Ok(response);
         }
@@ -57,12 +56,12 @@ namespace MyAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCategories()
         {
-            var lst_categories = await _context.Categories.ToListAsync();
+            var lst_categories = await _productService.GetCategories();
             var response = new SuccessResponseModel<CategoryModel>
             {
                 resultCode = "01",
                 errorMsg = "",
-                Data = lst_categories
+                Data = lst_categories.ToList()
             };
             return Ok(response);
         }

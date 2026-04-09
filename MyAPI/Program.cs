@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MyAPI.Data;
+using MyAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IproductService, ProductService>();
 
 var app = builder.Build();
 
