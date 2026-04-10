@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyAPI.Data;
+using MyAPI.DTO;
 using MyAPI.Models;
 using MyAPI.Services;
 
@@ -44,7 +45,7 @@ namespace MyAPI.Controllers
         public async Task<IActionResult> GetProducts()
         {
             var lst_products = await _productService.GetProducts();
-            var response = new SuccessResponseModel<ProductModel>
+            var response = new SuccessResponseModel<ProductResponseDTO>
             {
                 resultCode = "01",
                 errorMsg = "",
@@ -57,7 +58,7 @@ namespace MyAPI.Controllers
         public async Task<IActionResult> GetCategories()
         {
             var lst_categories = await _productService.GetCategories();
-            var response = new SuccessResponseModel<CategoryModel>
+            var response = new SuccessResponseModel<CategoryResponseDTO>
             {
                 resultCode = "01",
                 errorMsg = "",

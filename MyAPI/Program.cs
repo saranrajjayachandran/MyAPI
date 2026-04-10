@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyAPI.Data;
+using MyAPI.Repositories.Implementation;
+using MyAPI.Repositories.Interface;
 using MyAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,6 +15,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<IproductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 

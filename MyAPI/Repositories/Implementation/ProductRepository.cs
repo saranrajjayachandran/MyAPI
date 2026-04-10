@@ -1,16 +1,16 @@
 using System;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using MyAPI.Data;
 using MyAPI.Models;
+using MyAPI.Repositories.Interface;
 
-namespace MyAPI.Services;
+namespace MyAPI.Repositories.Implementation;
 
-public class ProductService : IproductService
+public class ProductRepository : IProductRepository
 {
-    private readonly AppDbContext dbContext;
+private readonly AppDbContext dbContext;
 
-    public ProductService(AppDbContext context)
+    public ProductRepository(AppDbContext context)
     {
         dbContext = context;
     }
@@ -40,5 +40,4 @@ public class ProductService : IproductService
         dbContext.Categories.Add(model);
         await dbContext.SaveChangesAsync();
     }
-
 }

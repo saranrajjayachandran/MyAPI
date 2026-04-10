@@ -1,9 +1,9 @@
 using System;
 using MyAPI.Models;
 
-namespace MyAPI.Services;
+namespace MyAPI.Repositories.Interface;
 
-public interface IproductService
+public interface IProductRepository
 {
     Task<IEnumerable<ProductModel>> GetProducts();
     Task<IEnumerable<CategoryModel>> GetCategories();
