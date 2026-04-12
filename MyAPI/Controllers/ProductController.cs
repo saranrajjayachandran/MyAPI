@@ -66,5 +66,43 @@ namespace MyAPI.Controllers
             };
             return Ok(response);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteProduct(String ID)
+        {
+            var result = await _productService.DeleteProduct(ID);
+            var response = result == true ? new SuccessResponseModel<String>
+            {
+                resultCode = "01",
+                errorMsg = "Product Deleted Successfully",
+                Data = []
+            } : 
+            new SuccessResponseModel<String>
+            {
+                resultCode = "00",
+                errorMsg = "Product Does not found, Try with different Product ID.",
+                Data = []
+            };
+            return Ok(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteCategory(String ID)
+        {
+            var result = await _productService.DeleteCategory(ID);
+            var response = result == true ? new SuccessResponseModel<String>
+            {
+                resultCode = "01",
+                errorMsg = "Catgory Deleted Successfully",
+                Data = []
+            } : 
+            new SuccessResponseModel<String>
+            {
+                resultCode = "00",
+                errorMsg = "Category Does not Found. Try with Different Category ID",
+                Data = []
+            };
+            return Ok(response);
+        }
     }
 }

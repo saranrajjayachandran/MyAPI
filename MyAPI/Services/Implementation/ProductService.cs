@@ -27,7 +27,7 @@ public class ProductService : IproductService
             Name = p.Name,
             Description = p.Description,
             Price = p.Price,
-            CategoryName = p.Category.Name ?? "NIL",
+            CategoryName = p.Category!.Name ?? "NIL",
         });
     }
 
@@ -50,6 +50,18 @@ public class ProductService : IproductService
     public async Task InsertCategory(CategoryModel model)
     {
         await productRepo.InsertCategory(model);
+    }
+
+    public async Task<bool> DeleteCategory(String ID)
+    {
+        var result = await productRepo.DeleteCategory(ID);
+        return result;
+    }
+
+    public async Task<bool> DeleteProduct(String ID)
+    {
+        var result = await productRepo.DeleteProduct(ID);
+        return result;
     }
 
 }

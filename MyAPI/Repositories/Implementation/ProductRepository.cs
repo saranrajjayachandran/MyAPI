@@ -40,4 +40,22 @@ private readonly AppDbContext dbContext;
         dbContext.Categories.Add(model);
         await dbContext.SaveChangesAsync();
     }
+
+    public async Task<bool> DeleteCategory(String ID)
+    {
+        var category = await dbContext.Categories.FindAsync(int.Parse(ID));
+        if(category == null) return false;
+        dbContext.Categories.Remove(category!);
+        await dbContext.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> DeleteProduct(String ID)
+    {
+        var product = await dbContext.Products.FindAsync(int.Parse(ID));
+        if(product == null) return false;
+        dbContext.Products.Remove(product!);
+        await dbContext.SaveChangesAsync();
+        return true;
+    }
 }
