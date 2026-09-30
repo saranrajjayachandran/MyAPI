@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj": {}
+    "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj": {}
   },
   "projects": {
-    "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj": {
+    "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
+        "projectUniqueName": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
         "projectName": "MyAPI",
-        "projectPath": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
+        "projectPath": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
         "packagesPath": "/home/saran/.nuget/packages/",
-        "outputPath": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/",
+        "outputPath": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/saran/.nuget/NuGet/NuGet.Config"
@@ -83,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.110/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

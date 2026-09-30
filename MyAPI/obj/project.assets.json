@@ -2626,11 +2626,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
+      "projectUniqueName": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
       "projectName": "MyAPI",
-      "projectPath": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
+      "projectPath": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/MyAPI.csproj",
       "packagesPath": "/home/saran/.nuget/packages/",
-      "outputPath": "/home/saran/DOTNET_PROJECTS/MyAPI/MyAPI/obj/",
+      "outputPath": "/home/saran/Projects/DOTNET_PROJECTS/MyAPI/MyAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/saran/.nuget/NuGet/NuGet.Config"
@@ -2702,7 +2702,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.104/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.110/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
@@ -3119,5 +3119,17 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.OpenApi' 2.4.1 has a known high severity vulnerability, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
